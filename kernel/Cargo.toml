@@ -1,0 +1,15 @@
+[package]
+name = "tarsius-kernel"
+version = "0.0.1"
+edition = "2021"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+opt-level = 3
+lto = true
+
+[dependencies]
+bootloader = "0.9"
